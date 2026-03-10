@@ -27,7 +27,7 @@ export function GameBoard({ board, size }: GameBoardProps) {
               },
             ]}
           >
-            <Tile value={value} size={size} gap={gap} />
+            <Tile value={value} tileSize={tileSize} />
           </View>
         ))
       )}
