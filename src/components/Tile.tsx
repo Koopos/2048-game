@@ -1,16 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
+import { Text, StyleSheet, Animated } from 'react-native';
 import { getTileColor, getTileTextColor } from '../utils/gameLogic';
 
 interface TileProps {
   value: number;
-  size: number;
-  gap: number;
+  tileSize: number;
   isNew?: boolean;
 }
 
-export function Tile({ value, size, gap, isNew = false }: TileProps) {
-  const tileSize = (size - gap * 5) / 4;
+export function Tile({ value, tileSize, isNew = false }: TileProps) {
   const scaleAnim = useRef(new Animated.Value(isNew ? 0 : 1)).current;
 
   useEffect(() => {
