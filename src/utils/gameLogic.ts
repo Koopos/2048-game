@@ -89,13 +89,13 @@ function moveBoard(board: number[][], direction: Direction): { board: number[][]
       rotations = 0;
       break;
     case 'up':
-      rotations = 1;
+      rotations = 3;
       break;
     case 'right':
       rotations = 2;
       break;
     case 'down':
-      rotations = 3;
+      rotations = 1;
       break;
   }
 
